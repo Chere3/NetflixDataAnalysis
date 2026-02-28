@@ -54,6 +54,27 @@ El dataset contiene 11 columnas principales:
 - **Calidad de datos**: Dataset completo sin valores faltantes
 - **Diversidad temporal**: Amplio rango de años de lanzamiento y fechas de incorporación
 
+## Entorno Reproducible
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python scripts/validate_dataset.py
+```
+
+## Flujo de ejecución recomendado
+1. `notebooks/netflix/01_exploracion.ipynb`
+2. `notebooks/netflix/02_preprocesamiento.ipynb`
+3. `notebooks/netflix/03_modelado.ipynb`
+4. `notebooks/netflix/04_resultados.ipynb`
+5. `notebooks/netflix/05_reporte.ipynb`
+
+## Calidad y automatización
+- Se incluye un validador de calidad de datos en `scripts/validate_dataset.py`
+- CI ejecuta validación automática en PRs y pushes a `dev`
+- Roadmap estratégico: [ROADMAP.md](./ROADMAP.md)
+
 ## Tecnologías Utilizadas
 
 - **Python** - Lenguaje principal de análisis
