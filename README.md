@@ -60,7 +60,9 @@ El dataset contiene 11 columnas principales:
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+pip install -e .
 python scripts/validate_dataset.py
+pytest -q
 ```
 
 ## Flujo de ejecución recomendado
@@ -72,6 +74,8 @@ python scripts/validate_dataset.py
 
 ## Calidad y automatización
 - Se incluye un validador de calidad de datos en `scripts/validate_dataset.py`
+- Lógica reusable de validación en `src/netflix_analysis/quality.py`
+- Pruebas unitarias en `tests/test_quality.py`
 - CI ejecuta validación automática en PRs y pushes a `dev`
 - Roadmap estratégico: [ROADMAP.md](./ROADMAP.md)
 
