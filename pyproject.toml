@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netflix-data-analysis"
+version = "0.1.0"
+description = "Data quality utilities for Netflix catalog analysis"
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
