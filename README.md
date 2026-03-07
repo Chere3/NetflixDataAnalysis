@@ -61,6 +61,7 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python scripts/validate_dataset.py
+python scripts/generate_quality_report.py
 ```
 
 ## Flujo de ejecución recomendado
@@ -72,7 +73,9 @@ python scripts/validate_dataset.py
 
 ## Calidad y automatización
 - Se incluye un validador de calidad de datos en `scripts/validate_dataset.py`
+- Se genera un reporte de calidad en Markdown con `scripts/generate_quality_report.py`
 - CI ejecuta validación automática en PRs y pushes a `dev`
+- CI publica artefacto `netflix-data-quality-report` en cada ejecución
 - Roadmap estratégico: [ROADMAP.md](./ROADMAP.md)
 
 ## Tecnologías Utilizadas
